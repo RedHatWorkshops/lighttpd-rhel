@@ -1,0 +1,24 @@
+{
+    "kind": "ImageStream",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "lighttpd-rhel",
+        "namespace": "myproject"
+    },
+    "spec": {
+        "tags": [
+            {
+                "name": "latest",
+                "annotations": {
+                    "description": "Run HTML",
+                    "iconClass": "icon-tomcat",
+                    "tags": "builder,lighttpd"
+                },
+            "from": {
+              "kind": "DockerImage",
+              "name": "172.30.1.1:5000/myproject/lighttpd-rhel:latest"
+            }
+            }
+        ]
+    }
+}
